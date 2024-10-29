@@ -1,3 +1,25 @@
+"""
+Script create virtual environment and install required packages from requirements.txt
+
+To manually create a virtual environment and install the required packages, follow these steps:
+1. Open a terminal
+>> python -m venv C:\path\to\new\virtual\environment
+
+2. Activate the virtual environment
+on windows:
+>> C:\path\to\new\virtual\environment\Scripts\activate
+on linux/mac:
+>> source /path/to/new/virtual/environment/bin/activate
+
+3. Install the required packages
+>> pip install -r requirements.txt
+or 
+>> pip install package1 package2 package3 ...
+
+4. Deactivate the virtual environment
+>> deactivate
+"""
+
 from venv import create
 import os
 import platform
