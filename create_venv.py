@@ -56,12 +56,17 @@ if not os.path.isfile(os.path.join(venv_dir, "pyvenv.cfg")):
 # print the command to activate the virtual environment (in shell)
 activate_command = ""
 if platform.system() == "Windows":
-    activate_command = "source " + os.path.join(venv_dir, "Scripts", "activate")
+    #activate_command = os.path.join(venv_dir, "Scripts", "activate")
+    activate_command = ".\.venv\Scripts\\activate"
 if platform.system() in ["Linux", "Darwin"]:
     activate_command = "source " + os.path.join(venv_dir, "bin", "activate")
 print(f"Activate the virtual environment with: {activate_command}")
 
 
+# print currently selected environment
+import sys
+from pathlib import Path
+print(Path(sys.executable).as_posix().split('/')[-3])
 
 """
 import os
