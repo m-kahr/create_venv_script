@@ -18,6 +18,10 @@ or
 
 4. Deactivate the virtual environment
 >> deactivate
+
+To create requirements.txt file run
+pip freeze > requirements.txt
+in active virtual environment.
 """
 
 from venv import create
